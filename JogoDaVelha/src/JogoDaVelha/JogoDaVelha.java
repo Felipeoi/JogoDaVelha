@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 
 public class JogoDaVelha {
+	// Tabuleiro 3x3 representado por um array de caracteres
 
 	public static char[][] tabuleiro = {
 			{' ', ' ',' '},
@@ -10,6 +11,7 @@ public class JogoDaVelha {
 			{' ', ' ',' '}
 			
     };
+	// Tabuleiro 3x3 inicializado com espaços em branco
 	private static char jogadorAtual = 'X';
 	
 	public static void main(String[] args) {
@@ -47,7 +49,7 @@ public class JogoDaVelha {
 
   }
 
-
+	  //imprime o tabuleiro
   public static void imprimirTabuleiro() {
 	   System.out.println("-----------");
 	   for (int i= 0; i<3; i++) {
@@ -91,7 +93,7 @@ public class JogoDaVelha {
 			  return true;
 	  }
 		  
-	
+	  		  //verificar diagonal inversa
 			  if (tabuleiro[0][2] == jogadorAtual &&
 				  tabuleiro[1][1] == jogadorAtual &&
 				  tabuleiro[2][0] == jogadorAtual) {
@@ -103,6 +105,7 @@ public class JogoDaVelha {
 	return false;
   }
   
+  //verifica se o tabuleiro esta cheio
   public static boolean tabuleiroCheio() {
 	  for(int i = 0; i < 3; i++) {
 		  for (int j = 0; j < 3; j++) {
